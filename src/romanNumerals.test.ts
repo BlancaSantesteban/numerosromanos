@@ -12,6 +12,7 @@ describe('Roman numerals', () => {
 
     expect(result).toBe('V');
   });
+
   it('Valor 10 devuelve X', () => {
     const result = romanNumeral(10);
 
