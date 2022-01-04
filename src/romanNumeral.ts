@@ -1,5 +1,5 @@
-export function romanNumeral(arg0: number) {
-  if (arg0 == 5) {
+export function romanNumeral(arabic: number) {
+  if (arabic == 5) {
     return 'V';
   }
   return 'I';
