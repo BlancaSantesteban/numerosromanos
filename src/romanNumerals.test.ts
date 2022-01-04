@@ -8,6 +8,7 @@ describe('Roman numerals', () => {
     [50, 'L'],
     [100, 'C'],
     [500, 'D'],
+    [1000, 'M'],
   ])('el valor %i devuelve %s', (arabic: number, roman: string) => {
     const result = romanNumeral(arabic);
 

@@ -1,4 +1,8 @@
 export function romanNumeral(arabic: number) {
+  if (arabic === 1000) {
+    return 'M';
+  }
+
   if (arabic === 500) {
     return 'D';
   }
