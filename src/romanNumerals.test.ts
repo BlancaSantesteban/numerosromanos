@@ -1,21 +1,13 @@
 import { romanNumeral } from './romanNumeral';
 
 describe('Roman numerals', () => {
-  it('Valor 1 devuelve I', () => {
-    const result = romanNumeral(1);
+  it.each([
+    [1, 'I'],
+    [5, 'V'],
+    [10, 'X'],
+  ])('el valor %i devuelve %s', (arabic: number, roman: string) => {
+    const result = romanNumeral(arabic);
 
-    expect(result).toBe('I');
-  });
-
-  it('Valor 5 devuelve V', () => {
-    const result = romanNumeral(5);
-
-    expect(result).toBe('V');
-  });
-
-  it('Valor 10 devuelve X', () => {
-    const result = romanNumeral(10);
-
-    expect(result).toBe('X');
+    expect(result).toBe(roman);
   });
 });
