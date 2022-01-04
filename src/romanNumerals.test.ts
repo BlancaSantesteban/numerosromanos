@@ -6,4 +6,10 @@ describe('Roman numerals', () => {
 
     expect(result).toBe('I');
   });
+
+  it('Valor 5 devuelve V', () => {
+    const result = romanNumeral(5);
+
+    expect(result).toBe('V');
+  });
 });
