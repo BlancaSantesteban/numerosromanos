@@ -1,7 +1,12 @@
 export function romanNumeral(arabic: number) {
+  if (arabic === 100) {
+    return 'C';
+  }
+
   if (arabic === 50) {
     return 'L';
   }
+
   if (arabic === 10) {
     return 'X';
   }
