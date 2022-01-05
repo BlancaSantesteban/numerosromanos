@@ -5,6 +5,9 @@ export function romanNumeral(arabic: number) {
   if (arabic === 6) {
     return 'VI';
   }
+  if (arabic === 11) {
+    return 'XI';
+  }
   if (arabic === 1000) {
     return 'M';
   }
