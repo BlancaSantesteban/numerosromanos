@@ -30,18 +30,22 @@ export function romanNumeral(arabic: number) {
     },
   ];
 
-  const isArabicOneLetter = arabicOneLetter.find(element => {
-    if (element.arabic === arabic) {
-      return element.roman;
-    }
-  });
+  const isArabicOneLetter = arabicOneLetter.find(
+    element => element.arabic === arabic,
+  );
   if (isArabicOneLetter) {
     return isArabicOneLetter.roman;
   }
-  const value = arabicOneLetter.find(element => {
-    if (element.arabic + 1 === arabic) {
-      return element.roman;
-    }
-  });
-  return value.roman.concat('I');
+  const isArabicOneLetterPlusOne = arabicOneLetter.find(
+    element => element.arabic + 1 === arabic,
+  );
+  if (isArabicOneLetterPlusOne) {
+    return isArabicOneLetterPlusOne.roman.concat('I');
+  }
+  const isArabicOneLetterPlusTwo = arabicOneLetter.find(
+    element => element.arabic + 2 === arabic,
+  );
+  if (isArabicOneLetterPlusTwo) {
+    return isArabicOneLetterPlusTwo.roman.concat('II');
+  }
 }
