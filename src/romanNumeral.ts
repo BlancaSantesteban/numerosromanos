@@ -48,4 +48,10 @@ export function romanNumeral(arabic: number) {
   if (isArabicOneLetterPlusTwo) {
     return isArabicOneLetterPlusTwo.roman.concat('II');
   }
+  const isArabicOneLetterPlusThree = arabicOneLetter.find(
+    element => element.arabic + 3 === arabic,
+  );
+  if (isArabicOneLetterPlusThree) {
+    return isArabicOneLetterPlusThree.roman.concat('III');
+  }
 }
