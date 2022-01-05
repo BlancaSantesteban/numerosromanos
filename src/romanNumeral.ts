@@ -30,22 +30,18 @@ export function romanNumeral(arabic: number) {
     },
   ];
 
-  const value = arabicOneLetter.find(element => {
+  const isArabicOneLetter = arabicOneLetter.find(element => {
     if (element.arabic === arabic) {
       return element.roman;
     }
   });
-  if (value) {
-    return value.roman;
+  if (isArabicOneLetter) {
+    return isArabicOneLetter.roman;
   }
-
-  if (arabic === 2) {
-    return 'II';
-  }
-  if (arabic === 6) {
-    return 'VI';
-  }
-  if (arabic === 11) {
-    return 'XI';
-  }
+  const value = arabicOneLetter.find(element => {
+    if (element.arabic + 1 === arabic) {
+      return element.roman;
+    }
+  });
+  return value.roman.concat('I');
 }
